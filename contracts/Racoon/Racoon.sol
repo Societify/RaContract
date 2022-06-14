@@ -2,7 +2,7 @@ pragma solidity ^0.8.0;
 import '../interfaces/IERC20.sol';
 //import '../TransferHelper.sol';
 
-contract valut {
+contract Racoon {
     address public owner;
     string public name;
     string public intro;
@@ -11,7 +11,7 @@ contract valut {
     uint public index;
     uint public index1;
     uint public index2;
-    address public rbd;
+    address public rac;
 
     event Deposit(address addr,address to, uint amount);
     event Withdraw(address to, uint amount,bool choose);
@@ -49,8 +49,8 @@ contract valut {
        bool termination;
    }
    manageinfo[]public list3;
-    constructor(address _rbd) public {
-        rbd = _rbd;
+    constructor(address _rac) public {
+        rac = _rac;
     }
   
     function creatVault(string memory _name,string memory _intro,string memory _logo,uint completeClosurePeriod,uint ReleasePeriod,uint monthlyReleaseRatio,uint AlertPayDayRule)public{
