@@ -1,7 +1,5 @@
 pragma solidity ^0.8.0;
 import '../interfaces/IERC20.sol';
-//import '../TransferHelper.sol';
-
 contract Racoon {
     address public owner;
     string public name;
@@ -34,7 +32,6 @@ contract Racoon {
         uint monthlyReleaseRatio;
         uint AlertPayDayRule;
     }
-    //mapping (address=>certigierInfo) certigier;
     mapping (address=>uint) amounts;
     struct withdrawalInfo{
         address owner;
@@ -124,15 +121,11 @@ contract Racoon {
             uint32 blockTime = uint32(block.timestamp % 2 ** 32);
             uint time2=info[to].time+(alertPayRules[address(this)].completeClosurePeriod+alertPayRules[address(this)].ReleasePeriod)*2592000;
             require(blockTime>=time2);  
-            IERC20(rbd).transfer(to,amount);
-            // uint balance=IERC20(rbd).balanceOf(address(this));
-            // reserve =balance ;                                                                                                                                                                                     
+            IERC20(rbd).transfer(to,amount);                                                                                                                                                                                
         }
     }
     function approves(address to,uint rate)public{
         index2=index2+1;
-        //require(msg.sender==owner);
-        //require(msg.sender !=to);
         manageinfo memory info=manageinfo({
             owner:to,
             proportion:rate,
