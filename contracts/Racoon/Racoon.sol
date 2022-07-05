@@ -45,6 +45,7 @@ contract Racoon {
        bool pause;
        bool termination;
    }
+   
    manageinfo[]public list3;
     constructor(address _rac) public {
         rac = _rac;
@@ -65,6 +66,7 @@ contract Racoon {
         });
         
     }
+    
     function deposit(address rbd, uint amount ) public {
         uint32 blockTime=uint32(block.timestamp % 2 ** 32);
         uint userBalance=IERC20(rbd).balanceOf(msg.sender);
