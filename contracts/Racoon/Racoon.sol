@@ -51,7 +51,6 @@ contract Racoon {
     constructor(address _rac) public {
         rac = _rac;
     }
-  
     function creatVault(string memory _name,string memory _intro,string memory _logo,uint completeClosurePeriod,uint ReleasePeriod,uint monthlyReleaseRatio,uint AlertPayDayRule)public{
         owner=msg.sender;
         name=_name;
