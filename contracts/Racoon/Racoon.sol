@@ -64,8 +64,7 @@ contract Racoon {
             monthlyReleaseRatio:monthlyReleaseRatio,
             AlertPayDayRule:AlertPayDayRule
 
-        });
-        
+        }); 
     }
     
     function deposit(address rbd, uint amount ) public {
