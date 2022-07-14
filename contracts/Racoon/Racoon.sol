@@ -17,6 +17,7 @@ contract Racoon {
     mapping(address=>bool)status;
     mapping(address=> userInfo) info;
     
+    
     struct userInfo{
         //uint id;
         string valut;
