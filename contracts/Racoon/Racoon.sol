@@ -1,5 +1,6 @@
 pragma solidity ^0.8.0;
 import '../interfaces/IERC20.sol';
+
 contract Racoon {
     address public owner;
     string public name;
