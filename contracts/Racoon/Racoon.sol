@@ -40,6 +40,7 @@ contract Racoon {
         uint time;
         uint amount;
     }
+    
     withdrawalInfo[]public list;
     struct manageinfo{
        address owner;
