@@ -17,7 +17,6 @@ contract Racoon {
     event CreatVault(string name,string intro,string logo,uint completeClosurePeriod,uint monthlyReleaseRatio,uint AlertPayDayRule);
     mapping(address=>bool)status;
     mapping(address=> userInfo) info;
- 
     struct userInfo{
         //uint id;
         string valut;
