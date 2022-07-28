@@ -25,6 +25,7 @@ contract Racoon {
         uint amount;
         uint time;
     }
+    
     userInfo[]public list2;
     mapping(address=>AlertPayRule) alertPayRules;
     struct AlertPayRule{
