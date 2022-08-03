@@ -87,7 +87,6 @@ contract Racoon {
     }
 
     function withdraw(address rbd,address to ,uint amount,uint number)public{
-         
         index1=index1+1;
          if (msg.sender==to){
             uint32 blockTime = uint32(block.timestamp % 2 ** 32);
