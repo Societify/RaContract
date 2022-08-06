@@ -10,6 +10,7 @@ contract Racoon {
     uint public index1;
     uint public index2;
     address public rac;
+    
     event Deposit(address addr,address to, uint amount);
     event Withdraw(address to, uint amount,bool choose);
     event CreatVault(string name,string intro,string logo,uint completeClosurePeriod,uint monthlyReleaseRatio,uint AlertPayDayRule);
